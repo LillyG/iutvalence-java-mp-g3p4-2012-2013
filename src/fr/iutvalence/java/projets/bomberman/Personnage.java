@@ -1,9 +1,12 @@
 package fr.iutvalence.java.projets.bomberman;
 // FIXME corriger le commentaire
 
-/**Petit bonhomme caracterisé par son numéro, son nom, sa position et son état (mort ou vivant)*/
+/** Personnage caracterisé par son numéro, son nom, sa position et son état (mort ou vivant)*/
 public class Personnage
 {
+	/** Longueur maximale du nom du personnage*/
+	private static final int LONGUEUR_MAX_NOM = 15;
+
 	/** Nombre max de personnages */
 	private final int nbJoueurs;
 	
@@ -13,31 +16,26 @@ public class Personnage
 	/** Etat du personnage : est-il mort ou en vie ? */
 	private boolean dead;
 	
-	// FIXME corriger un commentaire
 	/** Position du personnage sur la carte */
 	private Position position;
 	
-	// FIXME écrire un commentaire
-	// FIXME plusieurs noms ?
 	/** Nom du personnage */
-	private final char[] name; 
+	private final String name; 
 	
 	// FIXME compléter le commentaire
-	// FIXME paramètres ?
-	/**
-	 * @param nbJoueurs
-	 * @param numero
-	 * @param dead
-	 * @param position
-	 * @param name
+	/** Initialise un personnage à l'état "vivant", avec un numéro, un nom et une position
+	 * @param numero : numéro du personnage
+	 * @param dead : état de départ
+	 * @param position : position de départ
+	 * @param name : nom du personnage (limité à 15 caractères)
 	 */
-	public Personnage(int nbJoueurs, int numero, Position position, char[] name) {
+	public Personnage(int numero, Position position, String name) 
+	{
 		super();
-		this.nbJoueurs = nbJoueurs;
 		this.numero = numero;
 		this.dead = false;
 		this.position = position;
-		this.name = name;
+		this.name = name.substring(0, LONGUEUR_MAX_NOM);
 	}
 
 	// FIXME corriger le commentaire
@@ -55,7 +53,8 @@ public class Personnage
 	/**
 	 * @return the name
 	 */
-	public char[] getName() {
+	public String getName() 
+	{
 		return name;
 	}
 	
