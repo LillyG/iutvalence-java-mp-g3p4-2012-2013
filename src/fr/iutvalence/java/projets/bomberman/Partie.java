@@ -4,8 +4,8 @@ package fr.iutvalence.java.projets.bomberman;
 /** */
 public class Partie 
 {
-
 	// FIXME attributs, constructeurs, méthodes ?
+	
 
 	
 }

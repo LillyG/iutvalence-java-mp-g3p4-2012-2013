@@ -1,7 +1,8 @@
 package fr.iutvalence.java.projets.bomberman;
 // FIXME détailler le commentaire
 
-/**Environnement sur lequel vont se mouvoir les personnages, caractérisé par */
+/**Environnement définit par un nombre de colonnes et un nombre de lignes
+ * sur lequel vont se mouvoir les personnages, caractérisé par un */
 public class Map 
 {	
 	/** Zone de jeu représentée par un tableau d'entiers de lignes*colonnes cases (ici 15*13)*/

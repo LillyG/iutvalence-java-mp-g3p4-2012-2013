@@ -23,7 +23,7 @@ public class Personnage
 	private final String name; 
 	
 	// FIXME compléter le commentaire
-	/** Initialise un personnage à l'état "vivant", avec un numéro, un nom et une position
+	/** Initialise un personnage à l'état "vivant", 
 	 * @param numero : numéro du personnage
 	 * @param dead : état de départ
 	 * @param position : position de départ
