@@ -1,5 +1,8 @@
+// FIXME déplacer dans un paquetage différent
+
 package fr.iutvalence.java.projets.bomberman;
-	// FIXME écrire un commentaire
+
+// FIXME écrire un commentaire
 public class TestMap {
 
 	/**

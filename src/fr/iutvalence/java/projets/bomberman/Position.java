@@ -1,12 +1,18 @@
 package fr.iutvalence.java.projets.bomberman;
-/** Position des éléments (personnages, briques, bonus...) sur la carte, exprimée par 
- * un couple d'entiers.*/
+/** 
+ * Position des éléments (personnages, briques, bonus...) sur la carte, exprimée par 
+ * un couple d'entiers.
+ */
 public class Position 
 {
-	/** Position sur l'axe horizontal (numéro de la colonne).*/
+	/** 
+	 * Position sur l'axe horizontal (numéro de la colonne).
+	 */
 	private final int x;
 	
-	/**Position sur l'axe vertical (numéro de la ligne)*/
+	/**
+	 * Position sur l'axe vertical (numéro de la ligne)
+	 */
 	private final int y;
 	
 	// FIXME corriger le commentaire
@@ -37,5 +43,8 @@ public class Position
 	public int getY()
 	{
 		return y;
-	}	
+	}
+	
+	// FIXME redéfinir toString
+	// FIXME redéfinir equals et hashCode
 }
