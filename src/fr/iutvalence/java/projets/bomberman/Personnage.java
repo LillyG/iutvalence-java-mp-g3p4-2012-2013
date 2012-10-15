@@ -7,16 +7,10 @@ package fr.iutvalence.java.projets.bomberman;
 public class Personnage
 {
 	/** 
-	 * Longueur maximale du nom du personnage
+	 * Longueur maximale du nom du personnage (15 caractères, de 0 à 14)
 	 */
-	private static final int LONGUEUR_MAX_NOM = 15;
+	private static final int LONGUEUR_MAX_NOM = 14;
 
-	// FIXME corriger le commentaire
-	/** 
-	 * Nombre max de personnages 
-	 */
-	private final int nbJoueurs;
-	
 	/** 
 	 * Numéro affecté au personnage.
 	 */
@@ -56,8 +50,8 @@ public class Personnage
 
 	// FIXME corriger le commentaire
 
-	/**
-	 * @return the numero
+	/** Méthode retournant le numéro affecté au personnage créé
+	 * @return the numero : numéro du personnage
 	 */
 	public int getNumero() 
 	{

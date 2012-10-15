@@ -15,8 +15,8 @@ public class Position
 	 */
 	private final int y;
 	
-	// FIXME corriger le commentaire
-	/**
+	// FIXME (fixed ?) corriger le commentaire
+	/** Retourne la position (x,y) d'un élément sur la carte
 	 * @param x
 	 * @param y
 	 */

@@ -2,29 +2,39 @@ package fr.iutvalence.java.projets.bomberman;
 // FIXME détailler le commentaire
 /**
  * Environnement défini par un nombre de colonnes et un nombre de lignes
- * sur lequel vont se mouvoir les personnages, caractérisé par un 
+ * caractérisé par un 
  * */
 public class Map 
 {	
+	/** 
+	 * Constante définissant le nombre de lignes de la map
+	 */
+	private static final int NB_LIGNES= 13;
+	
+	/** 
+	 * Constante définissant le nombre de colonnes de la map
+	 */
+	private static final int NB_COLONNES = 15;
+	
 	/** 
 	 * Zone de jeu représentée par un tableau d'entiers de lignes*colonnes cases
 	 */
 	private int[][] surface;	
 	
-	// FIXME le nombre de lignes change t'il en cours de partie ?
+	// FIXME (fixed) le nombre de lignes change t'il en cours de partie ?
 	/** 
 	 * Nombre de lignes 
 	 */
-	private int lignes;
+	private final int lignes;
 
-	// FIXME le nombre de colonnes change t'il en cours de partie ?
+	// FIXME (fixed) le nombre de colonnes change t'il en cours de partie ?
 	/** 
 	 * Nombre de colonnes 
 	 */
-	private int colonnes;
+	private final int colonnes;
 				
 	// FIXME compléter le commentaire
-	/** 
+	/** Initialise chaque case de la map à un état donné 
 	 * 0 : vide 
 	 * 1 : brique (cassable)
 	 * 2 : bloc (fixe)
@@ -48,12 +58,19 @@ public class Map
 				{2,0,0,0,1,1,1,1,1,1,1,0,0,0,2},
 				{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
 		
-		// FIXME définir les valeurs par défaut sous forme de constantes
-		this.lignes=13;
-		this.colonnes=15;
+		// FIXME (fixed) définir les valeurs par défaut sous forme de constantes
+		this.lignes=NB_LIGNES;
+		this.colonnes=NB_COLONNES;
 
 	}
 
+	public Map(int lignes, int colonnes)
+	{
+		this.surface = new int [lignes][colonnes] ;
+		this.lignes=lignes;
+		this.colonnes=colonnes;
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
