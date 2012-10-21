@@ -28,17 +28,19 @@ public class Partie
 		this.nbJoueurs = nbJoueurs;
 	}
 
-	
+	// FIXME écrire un commentaire
 	public void demarrer()
 	{
 	this.start = true;
 	}
-	
+
+	// FIXME écrire un commentaire
 	public void terminer()
 	{
 		this.start = false;
 	}
 	
+	// FIXME compléter le commentaire
 	/**
 	 * @return the nbJoueurs
 	 */
@@ -47,6 +49,7 @@ public class Partie
 		return nbJoueurs;
 	}
 	
+	// FIXME pas de main ici, il faut considérer que la méthode start ne retourne que lorsque la partie est finie (1 partie = 1 round)
 	public static void main(String args[])
 	{
 	System.out.println("");

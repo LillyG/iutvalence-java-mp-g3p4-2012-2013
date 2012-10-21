@@ -20,14 +20,12 @@ public class Map
 	 * Zone de jeu représentée par un tableau d'entiers de lignes*colonnes cases
 	 */
 	private int[][] surface;	
-	
-	// FIXME (fixed) le nombre de lignes change t'il en cours de partie ?
+
 	/** 
 	 * Nombre de lignes 
 	 */
 	private final int lignes;
 
-	// FIXME (fixed) le nombre de colonnes change t'il en cours de partie ?
 	/** 
 	 * Nombre de colonnes 
 	 */
@@ -58,7 +56,6 @@ public class Map
 				{2,0,0,0,1,1,1,1,1,1,1,0,0,0,2},
 				{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}};
 		
-		// FIXME (fixed) définir les valeurs par défaut sous forme de constantes
 		this.lignes=NB_LIGNES;
 		this.colonnes=NB_COLONNES;
 
@@ -71,7 +68,8 @@ public class Map
 		this.colonnes=colonnes;
 	}
 	
-	/* (non-Javadoc)
+	// FIXME compléter le commentaire
+	/**
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
