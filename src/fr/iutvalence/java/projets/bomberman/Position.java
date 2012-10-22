@@ -15,10 +15,10 @@ public class Position
 	 */
 	private final int y;
 	
-	// FIXME corriger le commentaire (à discuter)
-	/** Retourne la position (x,y) d'un élément sur la carte
-	 * @param x
-	 * @param y
+	// FIXME corriger le commentaire (FIXED)
+	/** Créer une nouvelle position, en prenant x et y en paramètres
+	 * @param x position en abscisse
+	 * @param y position en ordonné
 	 */
 	public Position(int x, int y) 
 	{
@@ -27,8 +27,9 @@ public class Position
 		this.y = y;
 	}
 
-	// FIXME corriger le commentaire
+	// FIXME corriger le commentaire (FIXED)
 	/**
+	 * Lit la position en abscisse
 	 * @return the x
 	 */
 	public int getX() 
@@ -36,8 +37,9 @@ public class Position
 		return x;
 	}
 
-	// FIXME corriger le commentaire
+	// FIXME corriger le commentaire (FIXED)
 	/**
+	 * Lit la position en ordonné
 	 * @return the y
 	 */
 	public int getY()
@@ -45,6 +47,46 @@ public class Position
 		return y;
 	}
 	
-	// FIXME redéfinir toString
-	// FIXME redéfinir equals et hashCode
+	// FIXME redéfinir toString (FIXED)
+	/* renvoie la position sous la forme : "(x,y)" 
+	 * (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() 
+	{
+		String result="(" + this.x + "," + this.y + ")";
+		return result;
+	}
+
+	// FIXME redéfinir equals et hashCode (FIXED)
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() 
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + x;
+		result = prime * result + y;
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) 
+	{
+		// Vérification de l'égalité des références
+		if (obj == null) return false;
+		if (obj == this) return true;
+		// Vérification du type du paramètre
+		if (!(obj instanceof Position)) return false;
+		Position temp = (Position)obj;
+		// Vérification des valeurs des attributs
+		return (this.x == temp.x) && (this.y == temp.y);
+	}	
 }
+
+

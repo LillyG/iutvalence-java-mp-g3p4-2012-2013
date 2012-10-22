@@ -17,7 +17,7 @@ public class Partie
 	private final int nbJoueurs;
 
 	//TODO à compléter 
-	/** Initialisation de la partie...
+	/** Créer une nouvelle partie avec nbJoueurs joueurs...
 	 * @param start
 	 * @param nbJoueurs
 	 */
@@ -28,13 +28,19 @@ public class Partie
 		this.nbJoueurs = nbJoueurs;
 	}
 
-	// FIXME écrire un commentaire
+	// FIXME écrire un commentaire (FIXED)
+	/**
+	 * Méthode permettant de démarrer la partie
+	 */
 	public void demarrer()
 	{
 	this.start = true;
 	}
 
-	// FIXME écrire un commentaire
+	// FIXME écrire un commentaire (FIXED)
+	/**
+	 * Méthode permettant de terminer la partie
+	 */
 	public void terminer()
 	{
 		this.start = false;

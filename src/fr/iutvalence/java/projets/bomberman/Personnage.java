@@ -17,7 +17,7 @@ public class Personnage
 	private final int numero;
 	
 	/** 
-	 * Etat du personnage : est-il mort ou en vie ? 
+	 * Etat du personnage : vivant ou mort
 	 */
 	private boolean dead;
 	
@@ -31,12 +31,12 @@ public class Personnage
 	 */
 	private final String name; 
 	
-	// FIXME compléter le commentaire
+	// FIXME compléter le commentaire (FIXED)
 	/**
-	 *  Initialise un personnage à l'état "vivant" 
+	 * Créer un nouveau personnage à l'état "vivant"  
 	 * @param numero numéro du personnage
-	 * @param dead état de départ
-	 * @param position position de départ
+	 * @param dead état du personnage (vivant/mort)
+	 * @param position position du personnage
 	 * @param name nom du personnage (limité à 15 caractères)
 	 */
 	public Personnage(int numero, Position position, String name) 
@@ -48,23 +48,25 @@ public class Personnage
 		this.name = name.substring(0, LONGUEUR_MAX_NOM);
 	}
 
-	// FIXME corriger le commentaire
-
-	/** Méthode retournant le numéro affecté au personnage créé
-	 * @return the numero : numéro du personnage
+	// FIXME corriger le commentaire (FIXED)
+	
+	/** 
+	 * Lit le numéro affecté au personnage
+	 * @return the numero numéro du personnage
 	 */
 	public int getNumero() 
 	{
 		return numero;
 	}
 
-	// FIXME corriger le commentaire
+	// FIXME corriger le commentaire (FIXED)
 	/**
-	 * @return the name
+	 * renvoie le nom du personnage (sous la forme "nom").
+	 * @return the name nom du personnage
 	 */
 	public String getName() 
 	{
-		return name;
+		return this.name;
 	}
 	
 }

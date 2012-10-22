@@ -31,8 +31,9 @@ public class Map
 	 */
 	private final int colonnes;
 				
-	// FIXME compléter le commentaire
-	/** Initialise chaque case de la map à un état donné 
+	// FIXME compléter le commentaire (FIXED)
+	/** 
+	 * Créer une nouvelle carte de 13*15 cases, dont chaque case est initialisée à un état donné 
 	 * 0 : vide 
 	 * 1 : brique (cassable)
 	 * 2 : bloc (fixe)
@@ -61,6 +62,9 @@ public class Map
 
 	}
 
+	/** 
+	 * Créer une nouvelle carte de lignes*colonnes cases, qui ne sont pas initialisées
+	 */
 	public Map(int lignes, int colonnes)
 	{
 		this.surface = new int [lignes][colonnes] ;
