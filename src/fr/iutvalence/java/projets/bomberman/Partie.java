@@ -1,7 +1,7 @@
 package fr.iutvalence.java.projets.bomberman;
 // FIXME écrire un commentaire
 // TODO à compléter
-/** C'est l'évolution dans le temps de l'état d'une map, du nombre de joueurs, de leur état...*/
+/** C'est l'évolution dans le temps de l'état d'une map, du nombre de joueurs et de leur état,...*/
 public class Partie 
 {
 	// FIXME attributs, constructeurs, méthodes ?
@@ -15,9 +15,14 @@ public class Partie
 	 * Nombre de joueurs maximum de la partie
 	 */
 	private final int nbJoueurs;
+	
+	/**
+	 * Carte sur laquelle va se dérouler la partie
+	 */
+	private Map map;
 
 	//TODO à compléter 
-	/** Créer une nouvelle partie avec nbJoueurs joueurs...
+	/** Créer une nouvelle partie avec un nombre de joueurs (nbJoueurs) défini par l'utilisateur, une carte prédéfinie
 	 * @param start
 	 * @param nbJoueurs
 	 */
@@ -26,6 +31,7 @@ public class Partie
 		super();
 		this.start = true;
 		this.nbJoueurs = nbJoueurs;
+		this.map = new Map();
 	}
 
 	// FIXME écrire un commentaire (FIXED)
@@ -46,8 +52,9 @@ public class Partie
 		this.start = false;
 	}
 	
-	// FIXME compléter le commentaire
+	// FIXME compléter le commentaire (FIXED)
 	/**
+	 * Lit le nombre de joueurs de la partie
 	 * @return the nbJoueurs
 	 */
 	public int getNbJoueurs() 

@@ -61,7 +61,7 @@ public class Personnage
 
 	// FIXME corriger le commentaire (FIXED)
 	/**
-	 * renvoie le nom du personnage (sous la forme "nom").
+	 * Lit le nom du personnage
 	 * @return the name nom du personnage
 	 */
 	public String getName() 

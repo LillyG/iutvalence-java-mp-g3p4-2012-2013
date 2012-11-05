@@ -48,7 +48,8 @@ public class Position
 	}
 	
 	// FIXME redéfinir toString (FIXED)
-	/* renvoie la position sous la forme : "(x,y)" 
+	/*
+	 * renvoie la position sous la forme : "(x,y)" 
 	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
