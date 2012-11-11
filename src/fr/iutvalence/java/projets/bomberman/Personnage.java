@@ -1,6 +1,4 @@
 package fr.iutvalence.java.projets.bomberman;
-// FIXME corriger le commentaire
-
 /** 
  * Personnage caracterisé par son numéro, son nom, sa position et son état (mort ou vivant)
  */
@@ -31,7 +29,6 @@ public class Personnage
 	 */
 	private final String name; 
 	
-	// FIXME compléter le commentaire (FIXED)
 	/**
 	 * Créer un nouveau personnage à l'état "vivant"  
 	 * @param numero numéro du personnage
@@ -48,21 +45,19 @@ public class Personnage
 		this.name = name.substring(0, LONGUEUR_MAX_NOM);
 	}
 
-	// FIXME corriger le commentaire (FIXED)
 	
 	/** 
-	 * Lit le numéro affecté au personnage
-	 * @return the numero numéro du personnage
+	 * retourne le numéro affecté au personnage
+	 * @return le numéro affecté au personnage
 	 */
 	public int getNumero() 
 	{
 		return numero;
 	}
 
-	// FIXME corriger le commentaire (FIXED)
 	/**
-	 * Lit le nom du personnage
-	 * @return the name nom du personnage
+	 * retourne le nom du personnage
+	 * @return le nom du personnage
 	 */
 	public String getName() 
 	{

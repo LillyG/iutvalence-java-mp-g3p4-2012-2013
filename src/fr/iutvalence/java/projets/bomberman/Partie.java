@@ -1,11 +1,9 @@
 package fr.iutvalence.java.projets.bomberman;
-// FIXME écrire un commentaire
-// TODO à compléter
 /** C'est l'évolution dans le temps de l'état d'une map, du nombre de joueurs et de leur état,...*/
 public class Partie 
 {
-	// FIXME attributs, constructeurs, méthodes ?
-	
+	// FIXME il faut compléter la classe Partie pour qu'il s'agisse vraiment d'une partie de Bomberman
+	// FIXME se limiter pour le moment à gérer aléatoirement les déplacements du personnage (à discuter)
 	/** 
 	 * Etat de la partie : En cours ou terminée 
 	 */
@@ -21,7 +19,6 @@ public class Partie
 	 */
 	private Map map;
 
-	//TODO à compléter 
 	/** Créer une nouvelle partie avec un nombre de joueurs (nbJoueurs) défini par l'utilisateur, une carte prédéfinie
 	 * @param start
 	 * @param nbJoueurs
@@ -34,16 +31,15 @@ public class Partie
 		this.map = new Map();
 	}
 
-	// FIXME écrire un commentaire (FIXED)
 	/**
 	 * Méthode permettant de démarrer la partie
 	 */
 	public void demarrer()
 	{
 	this.start = true;
+	// FIXME ici, il faut faire une boucle qui déroule la partie et retourne lorsqu'elle est terminee
 	}
 
-	// FIXME écrire un commentaire (FIXED)
 	/**
 	 * Méthode permettant de terminer la partie
 	 */
@@ -52,19 +48,12 @@ public class Partie
 		this.start = false;
 	}
 	
-	// FIXME compléter le commentaire (FIXED)
 	/**
-	 * Lit le nombre de joueurs de la partie
-	 * @return the nbJoueurs
+	 * Retourne le nombre de joueurs de la partie
+	 * @return  le nombre de joueurs de la partie
 	 */
 	public int getNbJoueurs() 
 	{
 		return nbJoueurs;
-	}
-	
-	// FIXME pas de main ici, il faut considérer que la méthode start ne retourne que lorsque la partie est finie (1 partie = 1 round)
-	public static void main(String args[])
-	{
-	System.out.println("");
 	}
 }

@@ -1,5 +1,5 @@
 package fr.iutvalence.java.projets.bomberman;
-// FIXME détailler le commentaire (FIXED ?)
+// FIXME (NOT FIXED) dire à quoi sert la classe, non comment elle est faite
 /**
  * Environnement défini par un tableau d'entiers (de lignes*colonnes cases) dont les valeurs 
  * caractérisent un élément du jeu (personnage, brique, bombe, etc.)
@@ -31,7 +31,9 @@ public class Map
 	 */
 	private final int colonnes;
 				
-	// FIXME compléter le commentaire (FIXED)
+	
+	// FIXME définir les différentes valeurs possibles via des constantes ou une énumération
+	
 	/** 
 	 * Créer une nouvelle carte de 13*15 cases, dont chaque case est initialisée à un état donné 
 	 * 0 : vide 
@@ -72,9 +74,8 @@ public class Map
 		this.colonnes=colonnes;
 	}
 	
-	// FIXME compléter le commentaire (FIXED ?)
 	/**
-	 * Méthode retournant une chaîne de caractère qui représente un objet carte
+	 * Méthode retournant une chaîne de caractères qui représente un objet carte
 	 * la valeur 0 (vide) est représenté par un espace
 	 * la valeur 1 (bloc) est représenté par "x"
 	 * la valeur 2 (brique) est représenté par "X"
@@ -88,7 +89,6 @@ public class Map
 	{
 		String result;
 		result = "";
-		// FIXME à compléter (FIXED)
 		//for (int i = 0; i < this.surface.length; i++) 
 		int i = 0;
 		while (i < this.surface.length) 
@@ -125,7 +125,4 @@ public class Map
 		}
 		return result;
 	}
-	
-	// FIXME autres méthodes ?
-	
 }

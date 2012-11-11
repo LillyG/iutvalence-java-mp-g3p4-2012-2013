@@ -15,7 +15,6 @@ public class Position
 	 */
 	private final int y;
 	
-	// FIXME corriger le commentaire (FIXED)
 	/** Créer une nouvelle position, en prenant x et y en paramètres
 	 * @param x position en abscisse
 	 * @param y position en ordonné
@@ -27,28 +26,25 @@ public class Position
 		this.y = y;
 	}
 
-	// FIXME corriger le commentaire (FIXED)
 	/**
-	 * Lit la position en abscisse
-	 * @return the x
+	 * Retourne la position en abscisse
+	 * @return la position en abscisse
 	 */
 	public int getX() 
 	{
 		return x;
 	}
 
-	// FIXME corriger le commentaire (FIXED)
 	/**
-	 * Lit la position en ordonné
-	 * @return the y
+	 * Retourne la position en ordonnée
+	 * @return la position en ordonnée
 	 */
 	public int getY()
 	{
 		return y;
 	}
 	
-	// FIXME redéfinir toString (FIXED)
-	/*
+	/**
 	 * renvoie la position sous la forme : "(x,y)" 
 	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -59,8 +55,8 @@ public class Position
 		return result;
 	}
 
-	// FIXME redéfinir equals et hashCode (FIXED)
-	/* (non-Javadoc)
+
+	/**
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -73,7 +69,7 @@ public class Position
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
