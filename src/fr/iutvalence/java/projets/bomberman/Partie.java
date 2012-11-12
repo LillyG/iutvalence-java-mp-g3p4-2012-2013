@@ -14,21 +14,30 @@ public class Partie
 	 */
 	private final int nbJoueurs;
 	
+	/** 
+	 * Nombre de manches dans une partie
+	 */
+	private final int nbManches;
+	
 	/**
 	 * Carte sur laquelle va se dérouler la partie
 	 */
 	private Map map;
-
+	
+	private Personnage personnage;
+	
 	/** Créer une nouvelle partie avec un nombre de joueurs (nbJoueurs) défini par l'utilisateur, une carte prédéfinie
 	 * @param start
 	 * @param nbJoueurs
 	 */
-	public Partie(int nbJoueurs) 
+	public Partie(int nbJoueurs, int nbManches) 
 	{
 		super();
 		this.start = true;
 		this.nbJoueurs = nbJoueurs;
 		this.map = new Map();
+		this.nbManches = nbManches;
+		this.personnage = new Personnage(1,new Position(1,1),"Milou");
 	}
 
 	/**
@@ -36,7 +45,11 @@ public class Partie
 	 */
 	public void demarrer()
 	{
-	this.start = true;
+		this.start = true;
+		while (this.start)
+		{
+			
+		}
 	// FIXME ici, il faut faire une boucle qui déroule la partie et retourne lorsqu'elle est terminee
 	}
 

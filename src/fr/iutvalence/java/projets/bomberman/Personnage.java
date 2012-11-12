@@ -15,6 +15,11 @@ public class Personnage
 	private final int numero;
 	
 	/** 
+	 * Nombre de points du personnage (gagnés au cours de la partie).
+	 */
+	private final int nbPoints;
+	
+	/** 
 	 * Etat du personnage : vivant ou mort
 	 */
 	private boolean dead;
@@ -30,11 +35,12 @@ public class Personnage
 	private final String name; 
 	
 	/**
-	 * Créer un nouveau personnage à l'état "vivant"  
+	 * Créer un nouveau personnage à l'état "vivant", ayant 0 points  
 	 * @param numero numéro du personnage
 	 * @param dead état du personnage (vivant/mort)
 	 * @param position position du personnage
 	 * @param name nom du personnage (limité à 15 caractères)
+	 * @param nbPoints nombre de points du joueur
 	 */
 	public Personnage(int numero, Position position, String name) 
 	{
@@ -43,9 +49,9 @@ public class Personnage
 		this.dead = false;
 		this.position = position;
 		this.name = name.substring(0, LONGUEUR_MAX_NOM);
+		this.nbPoints = 0;
 	}
 
-	
 	/** 
 	 * retourne le numéro affecté au personnage
 	 * @return le numéro affecté au personnage
@@ -63,5 +69,4 @@ public class Personnage
 	{
 		return this.name;
 	}
-	
 }

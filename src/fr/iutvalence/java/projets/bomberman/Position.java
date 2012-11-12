@@ -34,7 +34,7 @@ public class Position
 	{
 		return x;
 	}
-
+	
 	/**
 	 * Retourne la position en ordonnée
 	 * @return la position en ordonnée
@@ -86,4 +86,5 @@ public class Position
 	}	
 }
 
+//TODO ajouter une méthode translate/deplacement qui modifie la position du personnage en fonction de la direction 
 
