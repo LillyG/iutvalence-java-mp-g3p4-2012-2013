@@ -27,8 +27,11 @@ public class Partie
 	private Personnage personnage;
 	
 	/** Créer une nouvelle partie avec un nombre de joueurs (nbJoueurs) défini par l'utilisateur, une carte prédéfinie
-	 * @param start
-	 * @param nbJoueurs
+	 * @param start booléen indiquant si la partie est en cours ou terminée
+	 * @param nbJoueurs nombre de joueurs dans la partie
+	 * @param map map utilisée pour la partie
+	 * @param nbManches nombre de manches de la partie
+	 * @param personnage un personnage
 	 */
 	public Partie(int nbJoueurs, int nbManches) 
 	{
@@ -67,6 +70,6 @@ public class Partie
 	 */
 	public int getNbJoueurs() 
 	{
-		return nbJoueurs;
+		return this.nbJoueurs;
 	}
 }

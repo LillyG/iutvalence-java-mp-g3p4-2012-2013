@@ -76,12 +76,32 @@ public class Map
 
 	/** 
 	 * Créer une nouvelle carte de lignes*colonnes cases, qui ne sont pas initialisées
+	 * @param lignes nombre de lignes de la map
+	 * @param colonnes nombre de colonnes de la map
 	 */
 	public Map(int lignes, int colonnes)
 	{
 		this.surface = new int [lignes][colonnes] ;
 		this.lignes=lignes;
 		this.colonnes=colonnes;
+	}
+	
+	/**
+	 * Retourne le nombre de lignes de la map
+	 * @return lignes nombre de lignes de la map
+	 */
+	public int getLIGNES() 
+	{
+		return this.lignes;
+	}
+	
+	/**
+	 * Retourne le nombre de colonnes de la map
+	 * @return lignes nombre de colonnes de la map
+	 */
+	public int getCOLONNES() 
+	{
+		return this.colonnes;
 	}
 	
 	/**
@@ -105,27 +125,27 @@ public class Map
 		{
 			for (int j = 0; j < this.surface[i].length; j++)
 			{
-				if (surface[i][j] == 0)
+				if (this.surface[i][j] == 0)
 				{
 					result= result + " ";
 				}
-				else if (surface[i][j] == 1)
+				else if (this.surface[i][j] == 1)
 				{
 					result= result + "o";
 				}
-				else if (surface[i][j] == 2)
+				else if (this.surface[i][j] == 2)
 				{
 					result= result + "X";
 				}
-				else if (surface[i][j] == 3)
+				else if (this.surface[i][j] == 3)
 				{
 					result= result + "&";
 				}
-				else if (surface[i][j] == 4)
+				else if (this.surface[i][j] == 4)
 				{
 					result= result + "¤";
 				}
-				else if (surface[i][j] == 5)
+				else if (this.surface[i][j] == 5)
 				{
 					result= result + "$";
 				}	
@@ -135,4 +155,33 @@ public class Map
 		}
 		return result;
 	}
+		
+	/**
+	 * Méthode qui retourne vrai si la position est dans la Map, faux sinon
+	 * @param position position à tester
+	 * @return boolean 
+	 */
+	public boolean estDansMaps(Position position)
+	{
+		if ((position.getX() < 0) && (position.getX() > (this.getCOLONNES() - 1)))
+			return false;
+		else 
+			if ((position.getY() < 0) && (position.getX() > (this.getLIGNES() - 1)))
+				return false;
+			else
+				return true;
+	}
+	
+	/**
+	 * Méthode qui retourne la nature de la case de position pos (sous la forme d'une constante) 
+	 * @param pos position de la case dont on veut connaître la "nature"
+	 * @return int valeur de la case 
+	 */
+	public int natureCase(Position pos) 
+	{
+		
+	}
+	//TODO ajouter une méthode qui permet de savoir "la nature" de chaque case (en passant en paramètre la position)
+	//TODO ajouter une méthode qui permet de modifier "la nature" des cases
+	
 }

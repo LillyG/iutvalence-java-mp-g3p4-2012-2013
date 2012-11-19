@@ -45,6 +45,24 @@ public class Position
 	}
 	
 	/**
+	 * Modifie la position en abscisse
+	 * @return la position en abscisse
+	 */
+	public int setX(int x) 
+	{
+		return x;
+	}
+	
+	/**
+	 * Modifie la position en ordonnée
+	 * @return la position en abscisse
+	 */
+	public int setY(int y) 
+	{
+		return y;
+	}
+	
+	/**
 	 * renvoie la position sous la forme : "(x,y)" 
 	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -84,7 +102,40 @@ public class Position
 		// Vérification des valeurs des attributs
 		return (this.x == temp.x) && (this.y == temp.y);
 	}	
+
+	/**
+	 * Méthode qui retourne la nouvelle position du personnage en fonction de son déplacement et de sa position initiale
+	 * (La nature des cases (bloc, brique...) qui entourent le personnage n'est pas pris en compte pour le moment,
+	 * le déplacement se fait quoiqu'il arrive (-> pb : sortie de la map ?)
+	 * @param direction direction que doit prendre le personnage
+	 * @return Position retourne la nouvelle position du personnage, après translation
+	 */
+	public Position translation(Direction direction)
+	{
+		Position pos_final = new Position(0,0);
+		
+		switch (direction)
+		{
+		    case HAUT: 
+		    	pos_final.setX(this.x);
+		    	pos_final.setY(this.y + 1);
+		           
+		    case BAS:  
+		    	pos_final.setX(this.x);
+		    	pos_final.setY(this.y - 1);
+		    	
+		    case DROITE: 
+		    	pos_final.setX(this.x + 1);
+		    	pos_final.setY(this.y);
+		             
+		    case GAUCHE:
+		    	pos_final.setX(this.x - 1);
+		    	pos_final.setY(this.y);
+		    
+		    default: 
+		    	pos_final.setX(this.x);
+		    	pos_final.setY(this.y);
+		}
+		return pos_final;
+	}
 }
-
-//TODO ajouter une méthode translate/deplacement qui modifie la position du personnage en fonction de la direction 
-
