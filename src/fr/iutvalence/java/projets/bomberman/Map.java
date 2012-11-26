@@ -10,12 +10,12 @@ public class Map
 	/** 
 	 * Constante définissant le nombre de lignes de la map
 	 */
-	private static final int NB_LIGNES= 13;
+	private static final int NB_LIGNES_DEFAUT= 13;
 	
 	/** 
 	 * Constante définissant le nombre de colonnes de la map
 	 */
-	private static final int NB_COLONNES = 15;
+	private static final int NB_COLONNES_DEFAUT = 15;
 	
 	/** 
 	 * Zone de jeu représentée par un tableau d'entiers de lignes*colonnes cases
@@ -37,11 +37,29 @@ public class Map
 	/**
 	 * Constante définissant les différentes valeurs possibles du tableau
 	 */
+	/**
+	 * Constante représentant une case vide sur la map
+	 */
 	private static final int CASE_VIDE = 0;
+	/**
+	 * Constante représentant une brique sur la map
+	 */
 	private static final int CASE_BRIQUE = 1;
+	/**
+	 * Constante représentant un bloc sur la map
+	 */
 	private static final int CASE_FIXE = 2;
+	/**
+	 * Constante représentant un personnage sur la map
+	 */
 	private static final int CASE_PERSO = 3;
+	/**
+	 * Constante représentant une bombe sur la map
+	 */
 	private static final int CASE_BOMBE = 4;
+	/**
+	 * Constante représentant un bonus sur la map
+	 */
 	private static final int CASE_BONUS = 5;
 	
 	/** 
@@ -69,8 +87,8 @@ public class Map
 				{CASE_FIXE,CASE_VIDE,CASE_VIDE,CASE_VIDE,CASE_BRIQUE,CASE_BRIQUE,CASE_BRIQUE,CASE_BRIQUE,CASE_BRIQUE,CASE_BRIQUE,CASE_BRIQUE,CASE_VIDE,CASE_VIDE,CASE_VIDE,CASE_FIXE},
 				{CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE,CASE_FIXE}};
 		
-		this.lignes=NB_LIGNES;
-		this.colonnes=NB_COLONNES;
+		this.lignes=NB_LIGNES_DEFAUT;
+		this.colonnes=NB_COLONNES_DEFAUT;
 
 	}
 
@@ -90,7 +108,7 @@ public class Map
 	 * Retourne le nombre de lignes de la map
 	 * @return lignes nombre de lignes de la map
 	 */
-	public int getLIGNES() 
+	public int getLignes() 
 	{
 		return this.lignes;
 	}
@@ -99,7 +117,7 @@ public class Map
 	 * Retourne le nombre de colonnes de la map
 	 * @return lignes nombre de colonnes de la map
 	 */
-	public int getCOLONNES() 
+	public int getColonnes() 
 	{
 		return this.colonnes;
 	}
@@ -161,27 +179,35 @@ public class Map
 	 * @param position position à tester
 	 * @return boolean 
 	 */
-	public boolean estDansMaps(Position position)
+	public boolean estDansMap(Position position)
 	{
-		if ((position.getX() < 0) && (position.getX() > (this.getCOLONNES() - 1)))
+		if ((position.getX() < 0) || (position.getX() > (this.getColonnes() - 1)))
 			return false;
-		else 
-			if ((position.getY() < 0) && (position.getX() > (this.getLIGNES() - 1)))
+		if ((position.getY() < 0) || (position.getX() > (this.getLignes() - 1)))
 				return false;
-			else
-				return true;
+		return true;
 	}
 	
+	// FIXME exception ?
 	/**
-	 * Méthode qui retourne la nature de la case de position pos (sous la forme d'une constante) 
+	 * Méthode qui retourne la nature de la case de position pos (sous la forme d'un entier) 
 	 * @param pos position de la case dont on veut connaître la "nature"
 	 * @return int valeur de la case 
 	 */
-	public int natureCase(Position pos) 
+	public int getNatureCase(Position pos) 
 	{
-		
+		return this.surface[pos.getX()][pos.getY()];
 	}
-	//TODO ajouter une méthode qui permet de savoir "la nature" de chaque case (en passant en paramètre la position)
-	//TODO ajouter une méthode qui permet de modifier "la nature" des cases
 	
+	/**
+	 * Méthode qui permet de modifier la nature de la case de position pos 
+	 * @param pos position de la case dont on veut modifier la "nature"
+	 * @param nature valeur qu'on veut attribuer à la case 
+	 * @return map avec la case modifiée
+	 */
+	public int[][] setNatureCase(Position pos, int nature)
+	{
+		this.surface[pos.getX()][pos.getY()] = nature;
+		return this.surface;
+	}	
 }

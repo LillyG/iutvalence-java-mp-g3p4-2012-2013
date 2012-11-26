@@ -45,24 +45,6 @@ public class Position
 	}
 	
 	/**
-	 * Modifie la position en abscisse
-	 * @return la position en abscisse
-	 */
-	public int setX(int x) 
-	{
-		return x;
-	}
-	
-	/**
-	 * Modifie la position en ordonnée
-	 * @return la position en abscisse
-	 */
-	public int setY(int y) 
-	{
-		return y;
-	}
-	
-	/**
 	 * renvoie la position sous la forme : "(x,y)" 
 	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -73,6 +55,18 @@ public class Position
 		return result;
 	}
 
+	
+	///**
+	// * Méthode permettant de modifier la position du personnage
+	// * @param x position en absisse
+	//* @param y position en ordonnee
+	//* @return nouvelle position
+	 //*/
+	//public Position setPosition(int x, int y)
+	//{
+		//Position pos = new Position(x,y);
+		//return pos;
+	//}
 
 	/**
 	 * @see java.lang.Object#hashCode()
@@ -112,29 +106,24 @@ public class Position
 	 */
 	public Position translation(Direction direction)
 	{
-		Position pos_final = new Position(0,0);
+		Position pos_final;
 		
 		switch (direction)
 		{
 		    case HAUT: 
-		    	pos_final.setX(this.x);
-		    	pos_final.setY(this.y + 1);
+		    	pos_final = new Position(this.x,this.y+1);
 		           
 		    case BAS:  
-		    	pos_final.setX(this.x);
-		    	pos_final.setY(this.y - 1);
+		    	pos_final = new Position(this.x, this.y-1);
 		    	
 		    case DROITE: 
-		    	pos_final.setX(this.x + 1);
-		    	pos_final.setY(this.y);
+		    	pos_final = new Position(this.x + 1, this.y);
 		             
 		    case GAUCHE:
-		    	pos_final.setX(this.x - 1);
-		    	pos_final.setY(this.y);
+		    	pos_final = new Position(this.x - 1, this.y);
 		    
 		    default: 
-		    	pos_final.setX(this.x);
-		    	pos_final.setY(this.y);
+		    	pos_final = new Position(this.x, this.y);
 		}
 		return pos_final;
 	}

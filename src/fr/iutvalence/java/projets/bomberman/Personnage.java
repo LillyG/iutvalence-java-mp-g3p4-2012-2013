@@ -37,10 +37,8 @@ public class Personnage
 	/**
 	 * Créer un nouveau personnage à l'état "vivant", ayant 0 points  
 	 * @param numero numéro du personnage
-	 * @param dead état du personnage (vivant/mort)
 	 * @param position position du personnage
 	 * @param name nom du personnage (limité à 15 caractères)
-	 * @param nbPoints nombre de points du joueur
 	 */
 	public Personnage(int numero, Position position, String name) 
 	{
@@ -58,7 +56,7 @@ public class Personnage
 	 */
 	public int getNumero() 
 	{
-		return numero;
+		return this.numero;
 	}
 
 	/**
@@ -69,4 +67,14 @@ public class Personnage
 	{
 		return this.name;
 	}
+	
+	/**
+	 * retourne la position du personnage
+	 * @return la position du personnage
+	 */
+	public Position getPositionPerso()
+	{
+		return this.position;
+	}
+	
 }
