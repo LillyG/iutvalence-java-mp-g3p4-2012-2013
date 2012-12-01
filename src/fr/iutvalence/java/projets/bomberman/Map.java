@@ -32,8 +32,6 @@ public class Map
 	 */
 	private final int colonnes;
 				
-	
-	// FIXME définir les différentes valeurs possibles via des constantes ou une énumération (FIXED)
 	/**
 	 * Constante définissant les différentes valeurs possibles du tableau
 	 */

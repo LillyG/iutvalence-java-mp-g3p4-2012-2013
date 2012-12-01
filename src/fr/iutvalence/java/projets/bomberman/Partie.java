@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.bomberman;
 /** C'est l'évolution dans le temps de l'état d'une map, du nombre de joueurs et de leur état,...*/
 public class Partie 
 {
-	// FIXME il faut compléter la classe Partie pour qu'il s'agisse vraiment d'une partie de Bomberman
 	// FIXME se limiter pour le moment à gérer aléatoirement les déplacements du personnage (à discuter)
 	/** 
 	 * Etat de la partie : En cours ou terminée 
@@ -56,6 +55,7 @@ public class Partie
 		Position nouvellePos = new Position(0,0);
 		while (this.start)
 		{
+			// FIXME il ne faut pas créer une partie à chaque tour !
 			Partie partie = new Partie(1);
 			this.map.setNatureCase(this.personnage.getPositionPerso(), 3); //3 = CASE_PERSO
 			nouvellePos = this.personnage.getPositionPerso().translation(direction);
