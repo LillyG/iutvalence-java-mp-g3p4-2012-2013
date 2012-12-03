@@ -16,7 +16,7 @@ public class TestPartie
 	 */
 	public static void main(String[] args) 
 	{
-		Partie p = new Partie();
+		Partie p = new Partie(1);
 		p.demarrer();
 	}
 }

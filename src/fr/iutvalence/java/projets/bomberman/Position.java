@@ -28,7 +28,7 @@ public class Position
 
 	/**
 	 * Retourne la position en abscisse
-	 * @return la position en abscisse
+	 * @return x la position en abscisse
 	 */
 	public int getX() 
 	{
@@ -37,7 +37,7 @@ public class Position
 	
 	/**
 	 * Retourne la position en ordonnée
-	 * @return la position en ordonnée
+	 * @return y la position en ordonnée
 	 */
 	public int getY()
 	{
@@ -107,23 +107,28 @@ public class Position
 	public Position translation(Direction direction)
 	{
 		Position pos_final;
-		
+		// TODO remove this
+		System.out.println(direction);
 		switch (direction)
 		{
 		    case HAUT: 
-		    	pos_final = new Position(this.x,this.y+1);
+		    	pos_final = new Position(this.x-1,this.y);
+		    	break;
 		           
 		    case BAS:  
-		    	pos_final = new Position(this.x, this.y-1);
+		    	pos_final = new Position(this.x+1, this.y);
+		    	break;
 		    	
 		    case DROITE: 
-		    	pos_final = new Position(this.x + 1, this.y);
+		    	pos_final = new Position(this.x, this.y+1);
+		    	break;
 		             
 		    case GAUCHE:
-		    	pos_final = new Position(this.x - 1, this.y);
-		    
+		    	pos_final = new Position(this.x, this.y-1);
+		    	break;
 		    default: 
 		    	pos_final = new Position(this.x, this.y);
+		    	break;
 		}
 		return pos_final;
 	}

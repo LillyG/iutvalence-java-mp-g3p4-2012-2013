@@ -1,5 +1,5 @@
 package fr.iutvalence.java.projets.bomberman;
-import java.lang.Math;
+import java.util.Random;
 
 /**
  * Type énuméré permettant de gérer aléatoirement les directions prises par le personnage
@@ -7,6 +7,8 @@ import java.lang.Math;
 public enum Direction
 {
 	HAUT, BAS, DROITE, GAUCHE;
+
+	private final static Random RNG = new Random(); 
 	
 	/**
 	 * Méthode qui retourne aléatoirement une des directions (haut, bas, droite ou gauche)
@@ -14,11 +16,7 @@ public enum Direction
 	 */
 	public static Direction alea()
 	{
-		int min = 1;
-		int max = 4;
-		int tirage = (int)( Math.random()*( max - min + 1 ) ) + min;
-		
-		switch (tirage)
+		switch (RNG.nextInt(4))
 		{
 		    case 0:  return HAUT;
 		           

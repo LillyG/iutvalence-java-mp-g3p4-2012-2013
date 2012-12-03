@@ -38,27 +38,27 @@ public class Map
 	/**
 	 * Constante représentant une case vide sur la map
 	 */
-	private static final int CASE_VIDE = 0;
+	public static final int CASE_VIDE = 0;
 	/**
 	 * Constante représentant une brique sur la map
 	 */
-	private static final int CASE_BRIQUE = 1;
+	public static final int CASE_BRIQUE = 1;
 	/**
 	 * Constante représentant un bloc sur la map
 	 */
-	private static final int CASE_FIXE = 2;
+	public static final int CASE_FIXE = 2;
 	/**
 	 * Constante représentant un personnage sur la map
 	 */
-	private static final int CASE_PERSO = 3;
+	public static final int CASE_PERSO = 3;
 	/**
 	 * Constante représentant une bombe sur la map
 	 */
-	private static final int CASE_BOMBE = 4;
+	public static final int CASE_BOMBE = 4;
 	/**
 	 * Constante représentant un bonus sur la map
 	 */
-	private static final int CASE_BONUS = 5;
+	public static final int CASE_BONUS = 5;
 	
 	/** 
 	 * Créer une nouvelle carte de 13*15 cases, dont chaque case est initialisée à un état donné 
@@ -119,6 +119,15 @@ public class Map
 	{
 		return this.colonnes;
 	}
+	
+	/*/**
+	 * Retourne la valeur de CASE_VIDE
+	 * @return valeur de CASE_VIDE (=0)
+	 *
+	public int getCaseVide()
+	{
+		return this.CASE_VIDE;
+	}*/
 	
 	/**
 	 * Méthode retournant une chaîne de caractères qui représente un objet carte
@@ -201,11 +210,9 @@ public class Map
 	 * Méthode qui permet de modifier la nature de la case de position pos 
 	 * @param pos position de la case dont on veut modifier la "nature"
 	 * @param nature valeur qu'on veut attribuer à la case 
-	 * @return map avec la case modifiée
 	 */
-	public int[][] setNatureCase(Position pos, int nature)
+	public void setNatureCase(Position pos, int nature)
 	{
 		this.surface[pos.getX()][pos.getY()] = nature;
-		return this.surface;
 	}	
 }

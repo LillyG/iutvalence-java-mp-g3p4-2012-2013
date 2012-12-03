@@ -46,7 +46,10 @@ public class Personnage
 		this.numero = numero;
 		this.dead = false;
 		this.position = position;
-		this.name = name.substring(0, LONGUEUR_MAX_NOM);
+		if (name.length() > LONGUEUR_MAX_NOM)
+			this.name = name.substring(0, LONGUEUR_MAX_NOM);
+		else 	
+			this.name = name;
 		this.nbPoints = 0;
 	}
 
@@ -75,6 +78,15 @@ public class Personnage
 	public Position getPositionPerso()
 	{
 		return this.position;
+	}
+	
+	/**
+	 * Méthode qui modifie la position du personnage
+	 * @param pos nouvelle position du personnage après déplacement
+	 */
+	public void setPositionPerso(Position pos)
+	{
+		this.position = pos;
 	}
 	
 }
